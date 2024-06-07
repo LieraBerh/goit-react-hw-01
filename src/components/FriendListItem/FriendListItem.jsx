@@ -5,11 +5,11 @@ import s from "./FriendListItem.module.css";
 
 export const FriendListItem = ({ avatar, name, isOnline }) => {
   return (
-    <div>
+    <div className={s.card}>
       <img src={avatar} alt={name} width="48" />
       <p>{name}</p>
       <p
-        className={clsx({
+        className={clsx(s.status, {
           [s.online]: isOnline,
           [s.offline]: !isOnline,
         })}
