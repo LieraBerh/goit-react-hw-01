@@ -1,8 +1,9 @@
 import "./App.css";
-import Profile from "./components/Profile/Profile";
+import { Profile } from "./components/Profile/Profile";
 import userData from "../src/userData.json";
 
 function App() {
+  console.log(userData);
   return (
     <>
       <Profile
