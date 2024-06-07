@@ -1,26 +1,29 @@
 /* eslint-disable react/prop-types */
+
+import s from "./Profile.module.css";
+
 export const Profile = ({ name, tag, location, image, stats }) => {
   const { followers, views, likes } = stats;
   return (
-    <div>
-      <div>
-        <img src={image} alt="User avatar" />
-        <p>{name}</p>
-        <p>@{tag}</p>
-        <p>{location}</p>
+    <div className={s.wrapper}>
+      <div className={s.card}>
+        <img className={s.img} src={image} alt={name} />
+        <p className={s.name}>{name}</p>
+        <p className={s.tag}>@{tag}</p>
+        <p className={s.location}>{location}</p>
       </div>
-      <ul>
-        <li>
+      <ul className={s.stats}>
+        <li className={s.stats__item}>
           <span>Followers</span>
-          <span>{followers}</span>
+          <span className={s.stats__num}>{followers}</span>
         </li>
-        <li>
+        <li className={s.stats__item}>
           <span>Views</span>
-          <span>{views}</span>
+          <span className={s.stats__num}>{views}</span>
         </li>
-        <li>
+        <li className={s.stats__item}>
           <span>Likes</span>
-          <span>{likes}</span>
+          <span className={s.stats__num}>{likes}</span>
         </li>
       </ul>
     </div>

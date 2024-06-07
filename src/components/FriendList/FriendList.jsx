@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { FriendListItem } from "../FriendListItem/FriendListItem";
+// import s from "./FriendList.module.css";
 
 export const FriendList = ({ friends }) => {
   return (
